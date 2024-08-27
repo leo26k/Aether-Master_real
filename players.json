@@ -1,0 +1,10 @@
+p1 : {
+	gold: 0,
+	food: 0,
+	pop: 0,
+	ore: 0,
+	aether: 0,
+	mythical: 0,
+	regions: [],
+	units: [],
+}
