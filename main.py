@@ -30,7 +30,7 @@ async def build(ctx, building, region):
 	player=roles[2]
 	db=read_db()
 	price=buildings[building]['price']
-	available_gold=db[player]['gold'][1]
+	available_gold=db[player]['gold']
 
 	if price>available_gold:
 		ctx.reply("no enough gold")
@@ -41,7 +41,7 @@ async def build(ctx, building, region):
 
 
 
-	db[player]['gold'][1]-=price
+	db[player]['gold']-=price
 	write_db(db)
 	await ctx.message.add_reaction('👍')
 
