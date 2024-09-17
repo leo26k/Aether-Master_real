@@ -24,19 +24,19 @@ async def test(ctx):
 
 @client.command()
 async def build(ctx, building, region):
-
-	# verify the player
+	
+	# player verification
 	roles=check_roles(ctx)
 	if not roles[0] and not roles[1]:
 		return
 	player=roles[2]
 
-	# get the required data
+	# getting the required data
 	db=read_db()
 	price=buildings[building]['price']
 	available_gold=db[player]['gold']
 
-	# check if the command is possible
+	# checking if the command is possible
 	if price>available_gold:
 		ctx.reply("no enough gold")
 		return
@@ -44,7 +44,7 @@ async def build(ctx, building, region):
 		ctx.reply("you dont own that region")
 		return
 	
-	# do the command and write to db
+	# doing the command and writing into the db
 	db[player]['gold']-=price
 	write_db(db)
 	await ctx.message.add_reaction('👍')
