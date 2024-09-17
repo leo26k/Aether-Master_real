@@ -1,4 +1,1082 @@
-r1: {
-	owner: "p1",
-	buildings: [],
+{
+    "P1": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P2": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P3": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P4": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P5": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P6": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P7": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P8": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P9": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P10": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P11": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P12": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P13": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P14": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P15": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P16": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P17": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P18": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P19": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P20": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P21": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P23": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P24": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P25": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P26": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P27": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P28": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P29": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P30": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P31": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P32": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P33": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P34": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P35": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P36": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P37": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P38": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P39": {
+        "owner": null,
+        "buildings": {}
+    },
+    "P40": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F1": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F2": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F3": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F4": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F5": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F6": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F7": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F8": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F9": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F10": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F11": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F12": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F13": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F14": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F15": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F16": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F17": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F18": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F19": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F20": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F21": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F22": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F23": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F24": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F25": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F26": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F27": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F28": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F29": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F30": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F31": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F32": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F33": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F34": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F35": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F36": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F37": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F38": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F39": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F40": {
+        "owner": null,
+        "buildings": {}
+    },
+    "F41": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H1": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H2": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H3": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H4": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H5": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H6": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H7": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H8": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H9": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H10": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H11": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H12": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H13": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H14": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H15": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H16": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H17": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H18": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H19": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H20": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H21": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H22": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H23": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H24": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H25": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H26": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H27": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H28": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H29": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H30": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H31": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H32": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H33": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H34": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H35": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H36": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H37": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H38": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H39": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H40": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H41": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H44": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H45": {
+        "owner": null,
+        "buildings": {}
+    },
+    "H46": {
+        "owner": null,
+        "buildings": {}
+    },
+    "C1": {
+        "owner": null,
+        "buildings": {}
+    },
+    "C2": {
+        "owner": null,
+        "buildings": {}
+    },
+    "C3": {
+        "owner": null,
+        "buildings": {}
+    },
+    "C4": {
+        "owner": null,
+        "buildings": {}
+    },
+    "C5": {
+        "owner": null,
+        "buildings": {}
+    },
+    "C6": {
+        "owner": null,
+        "buildings": {}
+    },
+    "C7": {
+        "owner": null,
+        "buildings": {}
+    },
+    "C8": {
+        "owner": null,
+        "buildings": {}
+    },
+    "C9": {
+        "owner": null,
+        "buildings": {}
+    },
+    "C10": {
+        "owner": null,
+        "buildings": {}
+    },
+    "C11": {
+        "owner": null,
+        "buildings": {}
+    },
+    "C12": {
+        "owner": null,
+        "buildings": {}
+    },
+    "C13": {
+        "owner": null,
+        "buildings": {}
+    },
+    "C14": {
+        "owner": null,
+        "buildings": {}
+    },
+    "C15": {
+        "owner": null,
+        "buildings": {}
+    },
+    "C16": {
+        "owner": null,
+        "buildings": {}
+    },
+    "C17": {
+        "owner": null,
+        "buildings": {}
+    },
+    "C18": {
+        "owner": null,
+        "buildings": {}
+    },
+    "C19": {
+        "owner": null,
+        "buildings": {}
+    },
+    "C20": {
+        "owner": null,
+        "buildings": {}
+    },
+    "C21": {
+        "owner": null,
+        "buildings": {}
+    },
+    "C22": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M1": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M2": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M3": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M4": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M5": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M6": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M7": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M8": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M9": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M10": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M11": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M12": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M13": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M14": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M15": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M16": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M17": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M18": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M19": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M20": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M21": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M22": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M23": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M24": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M25": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M26": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M27": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M28": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M29": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M30": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M31": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M32": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M33": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M34": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M35": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M36": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M37": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M38": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M39": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M40": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M41": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M42": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M43": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M44": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M45": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M46": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M47": {
+        "owner": null,
+        "buildings": {}
+    },
+    "M48": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S1": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S2": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S3": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S4": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S5": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S6": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S7": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S8": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S9": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S10": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S11": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S12": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S13": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S14": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S15": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S16": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S17": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S18": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S19": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S20": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S21": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S22": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S23": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S24": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S25": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S26": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S27": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S28": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S29": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S30": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S31": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S33": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S34": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S35": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S36": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S37": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S38": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S39": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S40": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S41": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S42": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S43": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S44": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S45": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S46": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S47": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S48": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S49": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S50": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S51": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S52": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S53": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S54": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S55": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S56": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S57": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S58": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S59": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S60": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S61": {
+        "owner": null,
+        "buildings": {}
+    },
+    "S62": {
+        "owner": null,
+        "buildings": {}
+    },
+    "D1": {
+        "owner": null,
+        "buildings": {}
+    },
+    "D2": {
+        "owner": null,
+        "buildings": {}
+    },
+    "D3": {
+        "owner": null,
+        "buildings": {}
+    },
+    "D4": {
+        "owner": null,
+        "buildings": {}
+    },
+    "D5": {
+        "owner": null,
+        "buildings": {}
+    },
+    "D6": {
+        "owner": null,
+        "buildings": {}
+    },
+    "D7": {
+        "owner": null,
+        "buildings": {}
+    },
+    "D8": {
+        "owner": null,
+        "buildings": {}
+    },
+    "D9": {
+        "owner": null,
+        "buildings": {}
+    },
+    "D10": {
+        "owner": null,
+        "buildings": {}
+    },
+    "D11": {
+        "owner": null,
+        "buildings": {}
+    },
+    "D12": {
+        "owner": null,
+        "buildings": {}
+    },
+    "D13": {
+        "owner": null,
+        "buildings": {}
+    },
+    "D14": {
+        "owner": null,
+        "buildings": {}
+    },
+    "D15": {
+        "owner": null,
+        "buildings": {}
+    }
 }
