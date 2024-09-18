@@ -6,7 +6,7 @@ players=['test_player_1', 'test_player_2', 'test_player_3', 'test_player_4', 'te
 def check_roles(ctx):
 	returning=[False, False, None]
 	for r in ctx.author.roles:
-		if str(r).lower() == 'gm':
+		if str(r).lower() == 'game master man':
 			returning[0]=True
 		elif str(r).lower() == 'player':
 			returning[1]=True
@@ -17,7 +17,7 @@ def check_roles(ctx):
 
 
 def read_db():
-	with open('da.json', 'r') as openfile:
+	with open('players.json', 'r') as openfile:
 	# Reading from json file
 		json_object = json.load(openfile)
 		openfile.close()
