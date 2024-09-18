@@ -55,6 +55,31 @@ async def build(ctx, building, region):
 	write_db(db)
 	await ctx.message.add_reaction('👍')
 
+@client.command()
+async def stats(ctx):
+	# verify the player
+	roles=check_roles(ctx)
+	if not roles[0] and not roles[1]:
+		return
+	player=roles[2]
+
+	# get the required data
+	db=read_db()
+
+	# make a stats message
+	final_msg=f"**{player}**\n\n"
+	gold=db[player]['gold']
+	food=db[player]['food']
+	pop=db[player]['pop']
+	ore=db[player]['ore']
+	aether=db[player]['aether']
+	mythical=db[player]['mythical']
+	regions=','.join(db[player]['regions'])
+	units=','.join(db[player]['units'])
+	final_msg+=f"**Gold:** {gold}\n**Food:** {food}\n**Pop:** {pop}\n**Ore:** {ore}\n**Aether:** {aether}\n**Mythical:** {mythical}\n**Regions:** {regions}\n**Units:** {units}"
+	
+	await ctx.reply(final_msg, mention_author=False)
+	return
 
 
 
