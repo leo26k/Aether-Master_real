@@ -35,18 +35,19 @@ async def build(ctx, building, region):
 	db=read_db()
 	region=region.upper()
 	building=building.lower()
-	price=buildings[building]['price']
 	available_gold=db[player]['gold']
 
 	# check if the command is possible
 	if building not in buildings:
-		await ctx.reply(f"{building} doesnt exist")
+		await ctx.reply(f"{building} doesnt exist", mention_author=False)
 		return
+	price=buildings[building]['price'] # checking the price of the building after we make sure it exists
+
 	if price>available_gold:
-		await ctx.reply("no enough gold")
+		await ctx.reply("no enough gold", mention_author=False)
 		return
 	if region not in db[player]['regions']:
-		await ctx.reply("you dont own that region")
+		await ctx.reply("you dont own that region", mention_author=False)
 		return
 	
 	# do the command and write to db
