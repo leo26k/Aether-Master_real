@@ -1,0 +1,11 @@
+{
+    "game_master_role": "game master man",
+    "player_role": "player",
+    "all_player_roles": [
+        "test_player_1", 
+        "test_player_2", 
+        "test_player_3", 
+        "test_player_4",
+        "test_player_5"
+    ]
+}
