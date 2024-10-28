@@ -1,12 +1,14 @@
 {
     "test_player_1": {
-        "gold": 50,
+        "gold": 25,
         "food": 0,
         "pop": 0,
         "ore": 0,
         "aether": 0,
         "mythical": 0,
-        "regions": ["P1"],
+        "regions": [
+            "P1"
+        ],
         "units": []
     },
     "test_player_2": {
