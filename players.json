@@ -1,15 +1,31 @@
 {
     "test_player_1": {
-        "gold": 20,
+        "gold": 11,
         "food": 0,
         "pop": 0,
         "ore": 0,
         "aether": 0,
         "mythical": 0,
         "regions": [
-            "P1"
+            "P1",
+            "P2"
         ],
-        "units": []
+        "units": [],
+        "orders": [
+            {
+                "type": "build",
+                "region": "P1",
+                "building": "farm"
+            },
+            {
+                "type": "build",
+                "region": "P2",
+                "building": "farm"
+            }
+        ],
+        "buildings": {
+            "P1": []
+        }
     },
     "test_player_2": {
         "gold": 0,
@@ -19,7 +35,8 @@
         "aether": 0,
         "mythical": 0,
         "regions": [],
-        "units": []
+        "units": [],
+        "orders": []
     },
     "test_player_3": {
         "gold": 0,
@@ -29,7 +46,8 @@
         "aether": 0,
         "mythical": 0,
         "regions": [],
-        "units": []
+        "units": [],
+        "orders": []
     },
     "test_player_4": {
         "gold": 0,
@@ -39,7 +57,8 @@
         "aether": 0,
         "mythical": 0,
         "regions": [],
-        "units": []
+        "units": [],
+        "orders": []
     },
     "test_player_5": {
         "gold": 0,
@@ -49,6 +68,7 @@
         "aether": 0,
         "mythical": 0,
         "regions": [],
-        "units": []
+        "units": [],
+        "orders": []
     }
 }
