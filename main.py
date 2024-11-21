@@ -114,7 +114,7 @@ async def stats(ctx):
 	aether=db[player]['aether']
 	mythical=db[player]['mythical']
 	regions=', '.join(db[player]['regions'])
-	units=', '.join(db[player]['units'])
+	# units=', '.join(db[player]['units'])
 	# orders_text=
 	n = 1
 	orders_txt = ""
@@ -122,7 +122,7 @@ async def stats(ctx):
 		if order['type'] in ['upgrade', 'build']:
 			orders_txt += f"{n}.   {order['type']} **{order['building']}** in **{order['region']}**\n"
 		n += 1
-	final_msg+=f"**Gold:** {gold}\n**Food:** {food}\n**Pop:** {pop}\n**Ore:** {ore}\n**Aether:** {aether}\n**Mythical:** {mythical}\n**Regions:** {regions}\n**Units:** {units}\n**Orders:\n** {orders_txt}"	
+	final_msg+=f"**Gold:** {gold}\n**Food:** {food}\n**Pop:** {pop}\n**Ore:** {ore}\n**Aether:** {aether}\n**Mythical:** {mythical}\n**Regions:** {regions}\n**Orders:\n** {orders_txt}"	
 	await ctx.reply(final_msg, mention_author=False)
 	return
 
@@ -178,6 +178,39 @@ async def new_turn(ctx, turn):
 		finnal_txt += f"{orders_txt}\n\n"
 	await ctx.channel.send(finnal_txt)
 
+
+@client.command()
+async def give(ctx, amount, resource, player):
+	# verify the GM
+	roles=check_roles(ctx, config)
+	if not roles[0]:
+		return
+	# get the required data
+	db=read_db()
+
+	resource = resource.lower()
+	if resource not in db[player]:
+		await ctx.reply("wrong resource", mention_author = False)
+	db[player][resource] += int(amount)
+	write_db(db)
+	await ctx.message.add_reaction('👍')
+	return
+
+@client.command()
+async def change(ctx, region, player_1, player_2):
+	# verify the player
+	roles=check_roles(ctx, config)
+	if not roles[0]:
+		return
+	# get the required data
+	db=read_db()
+
+	region = region.upper()
+	db[player_1]['regions'].remove(region)
+	db[player_2]['regions'].append(region)
+	write_db(db)
+	await ctx.message.add_reaction('👍')
+	return
 
 load_dotenv()
 
