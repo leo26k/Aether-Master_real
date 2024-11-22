@@ -1,15 +1,47 @@
 {
     "test_player_1": {
-        "gold": 20,
-        "food": 0,
+        "gold": 14,
+        "food": 3,
         "pop": 0,
-        "ore": 0,
-        "aether": 0,
+        "ore": 3,
+        "aether": 3,
         "mythical": 0,
         "regions": [
-            "P1"
+            "P2"
         ],
-        "units": []
+        "units": [],
+        "orders": [
+            {
+                "type": "build",
+                "region": "P1",
+                "building": "farm"
+            },
+            {
+                "type": "build",
+                "region": "P2",
+                "building": "farm"
+            },
+            {
+                "type": "move",
+                "text": "army A to p1"
+            },
+            {
+                "type": "move",
+                "text": "A, B, to P1"
+            },
+            {
+                "type": "attack",
+                "text": "p1 with amry A"
+            },
+            {
+                "type": "build",
+                "region": "P2",
+                "building": "market"
+            }
+        ],
+        "buildings": {
+            "P1": []
+        }
     },
     "test_player_2": {
         "gold": 0,
@@ -18,8 +50,11 @@
         "ore": 0,
         "aether": 0,
         "mythical": 0,
-        "regions": [],
-        "units": []
+        "regions": [
+            "P1"
+        ],
+        "units": [],
+        "orders": []
     },
     "test_player_3": {
         "gold": 0,
@@ -29,7 +64,8 @@
         "aether": 0,
         "mythical": 0,
         "regions": [],
-        "units": []
+        "units": [],
+        "orders": []
     },
     "test_player_4": {
         "gold": 0,
@@ -39,7 +75,8 @@
         "aether": 0,
         "mythical": 0,
         "regions": [],
-        "units": []
+        "units": [],
+        "orders": []
     },
     "test_player_5": {
         "gold": 0,
@@ -49,6 +86,7 @@
         "aether": 0,
         "mythical": 0,
         "regions": [],
-        "units": []
+        "units": [],
+        "orders": []
     }
 }
