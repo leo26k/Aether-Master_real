@@ -34,10 +34,10 @@ async def build(ctx, building, region):
 	player=roles[2]
 
 	# get the required data
-	db=read_db()
+	database=read_db()
 	region=region.upper()
 	building=building.lower()
-	available_gold=db[player]['gold']
+	available_gold=database[player]['gold']
 
 	# check if the command is possible
 	if building not in buildings:
@@ -49,14 +49,14 @@ async def build(ctx, building, region):
 	if price>available_gold:
 		await ctx.reply("no enough gold", mention_author=False)
 		return
-	if region not in db[player]['regions']:
+	if region not in database[player]['regions']:
 		await ctx.reply("you dont own that region", mention_author=False)
 		return
 	
-	# do the command and write to db
-	db[player]['gold'] -= price
-	db[player]['orders'].append({'type': "build", 'region': region, 'building': building})
-	write_db(db)
+	# do the command and write to database
+	database[player]['gold'] -= price
+	database[player]['orders'].append({'type': "build", 'region': region, 'building': building})
+	write_db(database)
 	await ctx.message.add_reaction('👍')
 
 
@@ -70,10 +70,10 @@ async def upgrade(ctx, building, region):
 	player=roles[2]
 
 	# get the required data
-	db=read_db()
+	database=read_db()
 	region=region.upper()
 	building=building.lower()
-	available_gold=db[player]['gold']
+	available_gold=database[player]['gold']
 
 	# check if the command is possible
 	if building not in buildings:
@@ -84,14 +84,14 @@ async def upgrade(ctx, building, region):
 	if price>available_gold:
 		await ctx.reply("no enough gold", mention_author = False)
 		return
-	if region not in db[player]['regions']:
+	if region not in database[player]['regions']:
 		await ctx.reply("you dont own that region", mention_author = False)
 		return
 	
-	# do the command and write to db
-	db[player]['gold'] -= price
-	db[player]['orders'].append({'type': "upgrade", "region": region, "building": building})
-	write_db(db)
+	# do the command and write to database
+	database[player]['gold'] -= price
+	database[player]['orders'].append({'type': "upgrade", "region": region, "building": building})
+	write_db(database)
 	await ctx.message.add_reaction('👍')
 
 @client.command()
@@ -103,24 +103,26 @@ async def stats(ctx):
 	player=roles[2]
 
 	# get the required data
-	db=read_db()
+	database=read_db()
 
 	# make a stats message
 	final_msg=f"**{player}**\n\n"
-	gold=db[player]['gold']
-	food=db[player]['food']
-	pop=db[player]['pop']
-	ore=db[player]['ore']
-	aether=db[player]['aether']
-	mythical=db[player]['mythical']
-	regions=', '.join(db[player]['regions'])
-	# units=', '.join(db[player]['units'])
+	gold=database[player]['gold']
+	food=database[player]['food']
+	pop=database[player]['pop']
+	ore=database[player]['ore']
+	aether=database[player]['aether']
+	mythical=database[player]['mythical']
+	regions=', '.join(database[player]['regions'])
+	# units=', '.join(database[player]['units'])
 	# orders_text=
 	n = 1
 	orders_txt = ""
-	for order in db[player]['orders']:
+	for order in database[player]['orders']:
 		if order['type'] in ['upgrade', 'build']:
 			orders_txt += f"{n}.   {order['type']} **{order['building']}** in **{order['region']}**\n"
+		elif order['type'] in ['attack', 'move']:
+			orders_txt += f"{n}.  **{order['type']}** {order['text']}\n"
 		n += 1
 	final_msg+=f"**Gold:** {gold}\n**Food:** {food}\n**Pop:** {pop}\n**Ore:** {ore}\n**Aether:** {aether}\n**Mythical:** {mythical}\n**Regions:** {regions}\n**Orders:\n** {orders_txt}"	
 	await ctx.reply(final_msg, mention_author=False)
@@ -136,24 +138,24 @@ async def remove(ctx, index = 0):
 	player=roles[2]
 
 	# get the required data
-	db=read_db()
+	database=read_db()
 	removed_orders = []
 	if index == -1:		
-		for _ in range(len(db[player]['orders'])):
-			removed_order = db[player]['orders'].pop(-1)
+		for _ in range(len(database[player]['orders'])):
+			removed_order = database[player]['orders'].pop(-1)
 			removed_orders.append(removed_order)
 	else:
-		removed_order = db[player]['orders'].pop(index - 1)
+		removed_order = database[player]['orders'].pop(index - 1)
 		removed_orders.append(removed_order)
 	for order in removed_orders:
 		order_type = order['type']
 		if order_type == 'build':
-			db[player]['gold'] += buildings[order['building']]['price'][0]
+			database[player]['gold'] += buildings[order['building']]['price'][0]
 		elif order_type == 'upgrade':
-			db[player]['gold'] += buildings[order['building']]['price'][1]
+			database[player]['gold'] += buildings[order['building']]['price'][1]
 
 	
-	write_db(db)
+	write_db(database)
 	await ctx.message.add_reaction('👍')
 	return 
 
@@ -164,16 +166,27 @@ async def new_turn(ctx, turn):
 	if not roles[0]:
 		return
 	# get the required data	
-	db=read_db()
+	database=read_db()
 
-	finnal_txt = f"**TURN {turn} RESULTS\n\n**"
-	for player in db:
-		finnal_txt += f"**{player}**\n"
+	finnal_txt = f"**TURN {turn} RESULTS** \n\n"
+	for player in database:
+		gold = database[player]['gold']
+		food = database[player]['food']
+		finnal_txt += f"**{player}** \n**Gold:** {gold}\n**Food:** {food}\n"
 		n = 1
-		orders_txt = ""
-		for order in db[player]['orders']:
+		
+		orders_txt = "**Orders:** \n"
+		sorted_orders = []
+		order_types = ['build', 'upgrade', 'move', 'attack']
+		for type in order_types:
+			for order in database[player]['orders']:
+				if type == order['type']:
+					sorted_orders.append(order)
+		for order in sorted_orders:
 			if order['type'] in ['upgrade', 'build']:
 				orders_txt += f"{n}.   {order['type']} **{order['building']}** in **{order['region']}** \n"
+			if order['type'] in ['attack', 'move']:
+				orders_txt += f"{n}.   **{order['type']}** {order['text']} \n"
 			n += 1
 		finnal_txt += f"{orders_txt}\n\n"
 	await ctx.channel.send(finnal_txt)
@@ -186,13 +199,13 @@ async def give(ctx, amount, resource, player):
 	if not roles[0]:
 		return
 	# get the required data
-	db=read_db()
+	database=read_db()
 
 	resource = resource.lower()
-	if resource not in db[player]:
+	if resource not in database[player]:
 		await ctx.reply("wrong resource", mention_author = False)
-	db[player][resource] += int(amount)
-	write_db(db)
+	database[player][resource] += int(amount)
+	write_db(database)
 	await ctx.message.add_reaction('👍')
 	return
 
@@ -203,12 +216,44 @@ async def change(ctx, region, player_1, player_2):
 	if not roles[0]:
 		return
 	# get the required data
-	db=read_db()
+	database=read_db()
 
 	region = region.upper()
-	db[player_1]['regions'].remove(region)
-	db[player_2]['regions'].append(region)
-	write_db(db)
+	database[player_1]['regions'].remove(region)
+	database[player_2]['regions'].append(region)
+	write_db(database)
+	await ctx.message.add_reaction('👍')
+	return
+
+@client.command()
+async def move(ctx, *args):
+	# verify the player
+	roles=check_roles(ctx, config)
+	if not roles[0] and not roles[1]:
+		return
+	# get the required data
+	player = roles[2]
+	database=read_db()
+
+	print(args)
+	database[player]['orders'].append({'type': 'move', 'text': " ".join(list(args))})
+	write_db(database)
+	await ctx.message.add_reaction('👍')
+	return
+
+@client.command()
+async def attack(ctx, *args):
+	# verify the player
+	roles=check_roles(ctx, config)
+	if not roles[0] and not roles[1]:
+		return
+	# get the required data
+	player = roles[2]
+	database=read_db()
+
+	print(args)
+	database[player]['orders'].append({'type': 'attack', 'text': " ".join(list(args))})
+	write_db(database)
 	await ctx.message.add_reaction('👍')
 	return
 

@@ -1,6 +1,6 @@
 {
     "test_player_1": {
-        "gold": 17,
+        "gold": 14,
         "food": 3,
         "pop": 0,
         "ore": 3,
@@ -20,6 +20,23 @@
                 "type": "build",
                 "region": "P2",
                 "building": "farm"
+            },
+            {
+                "type": "move",
+                "text": "army A to p1"
+            },
+            {
+                "type": "move",
+                "text": "A, B, to P1"
+            },
+            {
+                "type": "attack",
+                "text": "p1 with amry A"
+            },
+            {
+                "type": "build",
+                "region": "P2",
+                "building": "market"
             }
         ],
         "buildings": {
