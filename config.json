@@ -7,5 +7,27 @@
         "test_player_3", 
         "test_player_4",
         "test_player_5"
-    ]
+    ],
+    "player_flags": {
+        "test_player_1": {
+            "emoji_id": 1244702578944639187,
+            "emoji_name": "DracovianEmpire" 
+        }, 
+        "test_player_2": {
+            "emoji_id": 1256904517488742401,
+            "emoji_name": "misalzpat"
+        },
+        "test_player_3": {
+            "emoji_id": 1235296615980339250,
+            "emoji_name": "Vladivostok_Rweyeldzene"
+        },
+        "test_player_4": {
+            "emoji_id": 1244387382510485636,
+            "emoji_name": "EanapristKanakara"
+        },
+        "test_player_5": {
+            "emoji_id": 1235296573861265481,
+            "emoji_name": "Erdstern_Orden"
+        }
+    }
 }
