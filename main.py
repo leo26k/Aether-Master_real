@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 from discord.ext import commands, tasks
 from functions import *
-# from keep_alive import keep_alive
+from keep_alive import keep_alive
 
 client = commands.Bot(intents=discord.Intents.all(),
 	command_prefix='!',
@@ -299,7 +299,7 @@ async def attack(ctx, *args):
 # async def get_db(ctx):
 # 	print_db()
 
-# keep_alive()
+keep_alive()
 # my_secret = str(os.environ['discord_token'])
 load_dotenv()
 
