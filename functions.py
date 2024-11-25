@@ -30,7 +30,7 @@ def read_db():
 		json_object = json.load(openfile)
 		openfile.close()
 	# database = db
-	return database
+	return json_object
 
 def write_db(database):
 	with open('players.json', 'w') as openfile:
